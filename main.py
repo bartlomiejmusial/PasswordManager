@@ -7,6 +7,10 @@ import pyperclip
 
 
 def generate_password():
+    """
+    function generating a password containing from 8 to 10 letters, 2-4 digits and 2-4 characters, saves them to the
+    list, mixes and creates a password from these values in the form of one string
+    """
     letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u',
                'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P',
                'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
@@ -32,10 +36,16 @@ def generate_password():
     entry_password.delete(0, END)
     entry_password.insert(END, string=password)
     pyperclip.copy(password)
+
+
 # ---------------------------- SAVE PASSWORD ------------------------------- #
 
 
 def save_data():
+    """
+    function that saves the page, email and password separated by | to file 'data.txt'
+    """
+
     website = entry_website.get()
     email = entry_email_username.get()
     password = entry_password.get()
